@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns Cecília ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Tela de Login -->
+    <div id="login-screen">
+        <div class="login-box">
+            <h2>🔒 Acesso Restrito</h2>
+            <p>Digite a senha para entrar</p>
+            <input type="password" id="password-input" placeholder="Senha">
+            <button onclick="checkPassword()">Entrar</button>
+            <p id="error-msg" class="hidden">Senha incorreta!</p>
+        </div>
+    </div>
+
+    <div id="main-content" class="blurred">
+        <header>
+            <div class="date-badge">22/05</div>
+            <h1>Parabéns Cecília ♥️</h1>
+            <p>Hoje o dia é todo seu ✨</p>
+        </header>
+
+        <!-- Música de fundo (opcional) -->
+        <audio id="bg-music" src="music.mp3" loop></audio>
+
+        <section class="gallery-section">
+            <div class="carousel-container">
+                <button class="nav-btn" onclick="prevImage()">❮</button>
+                <img id="carousel-img" src="imgs/1.png" alt="Foto da Maria">
+                <button class="nav-btn" onclick="nextImage()">❯</button>
+            </div>
+        </section>
+
+        <!-- Mensagem principal -->
+        <section class="message-section">
+            <div class="card">
+                <h2>⭐ Uma mensagem pra você ⭐</h2>
+                <p>
+                    Feliz aniversário! Que sua vida seja leve, que a saúde acompanhe todos os seus dias 
+                    e que nunca faltem motivos pra sorrir. Que você conquiste tudo o que sonha e receba 
+                    do mundo só coisas boas.
+                </p>
+                <p>Aproveite o seu dia! 💖</p>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <p style="margin: 30px 0;">🎈 ✨ 🎈</p>
+
+        <!-- Seção especial -->
+        <section class="special-section">
+            <div class="card">
+                <h2>🌷 Por que você é especial</h2>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li>💜 Seu sorriso ilumina qualquer lugar</li>
+                    <li>✨ Sua presença faz diferença</li>
+                    <li>🌸 Seu jeito é único</li>
+                    <li>💫 Você merece tudo de bom</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Desejos -->
+        <section class="wishes-section">
+            <div class="card">
+                <h2>🎁 Meus desejos pra você</h2>
+                <p>Mais sonhos realizados, menos preocupações, muitas risadas e momentos inesquecíveis.</p>
+            </div>
+        </section>
+
+        <!-- Mensagem final -->
+        <section class="final-message">
+            <div class="card">
+                <h2>💌</h2>
+                <p>
+                    Que esse novo ano venha com amor, paz e tudo aquilo que faz seu coração feliz.
+                    Você merece o mundo.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Powered by python</p>
+            <button>scipt</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

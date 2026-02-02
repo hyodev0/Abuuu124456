@@ -1,0 +1,223 @@
+:root {
+    --bg-color: #0f0a1a;      /* Fundo roxo bem escuro */
+    --primary: #c084fc;       /* Roxo claro (destaque) */
+    --accent: #fde047;        /* Amarelo (mantém contraste) */
+    --text: #e5e7eb;          /* Texto claro */
+    --white: #181024;         /* "Cards" escuros */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+/* --- TELA DE LOGIN --- */
+#login-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(243, 232, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Efeito extra de blur */
+}
+
+.login-box {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 2px solid var(--primary);
+}
+
+.login-box input {
+    display: block;
+    margin: 15px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.login-box button {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background-color: #9333ea;
+}
+
+.hidden { display: none; }
+#error-msg { color: red; font-size: 0.9rem; margin-top: 10px; }
+
+/* --- CONTEÚDO PRINCIPAL --- */
+#main-content {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    transition: filter 0.5s ease;
+}
+
+/* Classe aplicada quando bloqueado */
+.blurred {
+    filter: blur(8px);
+    pointer-events: none;
+    overflow: hidden;
+    height: 100vh;
+}
+
+header h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin: 20px 0;
+}
+
+.date-badge {
+    background: var(--accent);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: #854d0e;
+    margin-top: 20px;
+}
+
+/* --- GALERIA --- */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 4px solid var(--white);
+}
+
+#carousel-img {
+    width: 100%;
+    height: 400px; /* Altura fixa para uniformidade */
+    object-fit: cover;
+    display: block;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    color: var(--primary);
+}
+.nav-btn:hover { background: var(--white); }
+.nav-btn:first-child { left: 0; }
+.nav-btn:last-child { right: 0; }
+
+/* --- TEXTO E FOOTER --- */
+.card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+footer {
+    margin-top: 50px;
+    padding-bottom: 20px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+#secret-btn {
+    background: none;
+    border: none;
+    font-size: 0.7rem;
+    color: #d8b4fe; /* Cor bem discreta */
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+/* --- PÁGINA SECRETA --- */
+.secret-body {
+    justify-content: center;
+    background: linear-gradient(135deg, #F3E8FF 0%, #fae8ff 100%);
+}
+
+.secret-container {
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+.secret-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.15);
+    border-top: 5px solid var(--accent);
+    position: relative;
+}
+
+.secret-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    font-style: italic;
+}
+
+.signature {
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: right;
+}
+
+.heart-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.back-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
